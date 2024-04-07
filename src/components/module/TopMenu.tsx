@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { topMenu } from "../../data/data";
 
 function TopMenu() {
@@ -6,7 +7,7 @@ function TopMenu() {
       {topMenu.map((item) => (
         <ul key={item.id}>
           <li className="text-sm cursor-pointer hover:text-[#EF5350] duration-150 font-medium text-gray-900">
-            {item.title}
+            <Link to={item.paths}>{item.title}</Link>
           </li>
         </ul>
       ))}

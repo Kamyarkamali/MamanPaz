@@ -7,14 +7,24 @@ import { motion } from "framer-motion";
 
 //icons
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
+import LoginForm from "../module/LoginForm";
 
 function Header() {
-  const { hamburgerMenu, setHamburgerMenu } = useContext(MyContext);
+  const {
+    hamburgerMenu,
+    setHamburgerMenu,
+    openRegister,
+    setOpenregister,
+    modalLogin,
+    setModalLogin,
+  } = useContext(MyContext);
 
   useEffect(() => {
     function hanelClick() {
       if (hamburgerMenu) {
         setHamburgerMenu(false);
+        setModalLogin(false);
       }
     }
     document.addEventListener("click", hanelClick);
@@ -23,17 +33,30 @@ function Header() {
     };
   }, [hamburgerMenu]);
 
+  // close box register/login
+  const registerHandeler = () => {
+    setOpenregister((prev) => !prev);
+    setModalLogin(false);
+  };
+
+  const loginHandeler = () => {
+    setModalLogin((prev) => !prev);
+    setOpenregister(false);
+  };
+
   return (
     <div className={`${hamburgerMenu ? "overlay" : null}`}>
-      <div className="max-w-[1583px] mt-4 m-auto">
+      <div className="max-w-[1583px] z-50 fixed top-[-1.3rem] p-5 left-0 right-0 bg-white mt-4 m-auto">
         <div className="flex items-center justify-between 2xl:max-w-[1540px] m-auto">
           <div className="flex items-center gap-4">
-            <img src={logo} alt="/" className="w-[40px] lg:mr-0 mr-9" />
+            <Link to={"/"}>
+              <img src={logo} alt="/" className="w-[40px] lg:mr-0 mr-9" />
+            </Link>
             <TopMenu />
           </div>
 
           <div className="flex gap-3 lg:ml-0  ml-9">
-            <button className="border-[1px] w-[116px] text-[#EF5350] text-sm p-[6px] font-bold rounded-lg border-[#EF5350]">
+            <button className="border-[1px] w-[119px] h-[36px] text-[#EF5350] text-sm p-[6px] font-bold rounded-lg border-[#EF5350]">
               پنل نهار شرکتی
             </button>
 
@@ -59,9 +82,35 @@ function Header() {
               </motion.div>
             )}
 
-            <button className="bg-[#EF5350] lg:block hidden w-[116px] p-[6px] text-sm text-white font-bold rounded-lg">
-              ثبت نام / ورود
-            </button>
+            <div className="relative">
+              <button
+                onClick={() => setOpenregister(true)}
+                className="bg-[#EF5350] w-[119px] h-[36px] lg:block hidden p-[6px] text-sm text-white font-bold rounded-lg"
+              >
+                ثبت نام / ورود
+              </button>
+            </div>
+            {/* top menu login/register */}
+            {openRegister && (
+              <div className="absolute shadow-md shadow-gray-300 rounded-lg hidden left-[2rem] lg:flex flex-col w-[200px] justify-center top-[4rem] bg-white p-3">
+                <Link
+                  to={"/register"}
+                  className="border-b-2 flex justify-center cursor-pointer hover:bg-blue-300 p-1 rounded-lg hover:text-white duration-200"
+                >
+                  <button onClick={registerHandeler}>ثبت نام</button>
+                </Link>
+
+                <button
+                  className="cursor-pointer flex justify-center hover:bg-blue-300 p-1 rounded-lg hover:text-white duration-200"
+                  onClick={loginHandeler}
+                >
+                  ورود
+                </button>
+              </div>
+            )}
+
+            {/* login form modal */}
+            {modalLogin && <LoginForm />}
           </div>
         </div>
       </div>

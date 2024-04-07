@@ -12,7 +12,7 @@ const Layout: FC<Ichildren> = ({ children }) => {
         <Header />
       </header>
 
-      <main className="min-h-[2500px]">{children}</main>
+      <main className="min-h-[3000px]">{children}</main>
 
       <footer>
         <Footer />

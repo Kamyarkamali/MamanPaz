@@ -1,9 +1,9 @@
-import HomePage from "./components/templates/HomePage";
+import Router from "./components/Routers/Router";
 
 function App() {
   return (
     <>
-      <HomePage />
+      <Router />
     </>
   );
 }
