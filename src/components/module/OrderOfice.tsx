@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import office from "../../assets/images/office.jpg";
 
 function OrderOfice() {
@@ -18,9 +19,11 @@ function OrderOfice() {
           اشتراک بگذارید تا کارشناسان مامان‌پز با شما تماس بگیرند.
         </p>
         <div className="flex justify-center mt-[4rem]">
-          <button className="bg-[#FF5851] text-white shadow-lg shadow-gray-500 w-[300px] h-[50px] rounded-lg">
-            ناهار شرکتی میخواهم
-          </button>
+          <Link to={"/services"}>
+            <button className="bg-[#FF5851] text-white shadow-lg shadow-gray-500 w-[300px] h-[50px] rounded-lg">
+              ناهار شرکتی میخواهم
+            </button>
+          </Link>
         </div>
       </div>
     </div>

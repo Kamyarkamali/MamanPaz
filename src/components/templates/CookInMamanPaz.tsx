@@ -1,13 +1,22 @@
-import image from "../../assets/images/back.jpg";
+import Main from "../module/Main";
+import Saidbar from "../module/Saidbar";
 
-import style from "../templates/CookinMamanPaz.module.css";
+import bg from "../../assets/images/back.jpg";
 
 function CookInMamanPaz() {
   return (
-    <div className="flex gap-20 mt-[8rem]">
-      <div>saidbar</div>
-      <div className="bg-blue-500 max-w-[1300px] h-[100vh] flex justify-between flex-1 p-[2rem] gap-[1.5rem]">
-        content
+    <div
+      className="flex xl:h-[340vh] lg:h-[360vh] md:h-[900vh] sm:h-[900vh] h-[900vh] gap-10 mt-[4rem]"
+      style={{
+        backgroundImage: `url(${`${bg}`})`,
+        width: "100%",
+      }}
+    >
+      <div className="xl:block hidden">
+        <Saidbar />
+      </div>
+      <div className="rounded-lg max-w-[1190px] h-[100vh] flex justify-center flex-1 p-[2rem] gap-[1.5rem]">
+        <Main />
       </div>
     </div>
   );

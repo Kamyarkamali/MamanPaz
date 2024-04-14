@@ -9,7 +9,7 @@ function HamburgerMenu() {
   const { modalLogin, setModalLogin } = useContext(MyContext);
 
   return (
-    <div className="bg-[#FFFFFF] h-[110vh] z-30 duration-300 w-[300px]">
+    <div className="bg-[#FFFFFF] h-[110vh] z-70 duration-300 w-[300px]">
       <div className="flex flex-col items-center w-[100px] justify-center h-[100px]">
         <img src={logo} alt="/" className="w-[40px]" />
       </div>

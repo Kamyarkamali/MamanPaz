@@ -5,6 +5,8 @@ import Register from "../module/Register";
 import Services from "../module/Services";
 import CookingMamanPaz from "../templates/CookingMamanPaz";
 import CookInMamanPaz from "../templates/CookInMamanPaz";
+import ProfileMaman from "../templates/ProfileMaman";
+import PageNotFound from "../templates/404";
 
 function Router() {
   return (
@@ -15,6 +17,8 @@ function Router() {
         <Route path="/services" element={<Services />} />
         <Route path="/cookingMamanPaz" element={<CookingMamanPaz />} />
         <Route path="/cookforMamanPaz" element={<CookInMamanPaz />} />
+        <Route path="/:id" element={<ProfileMaman />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );

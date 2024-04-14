@@ -1,8 +1,0 @@
-.back {
-  background-image: url("/src/assets/images/back.jpg");
-  margin-top: 5rem;
-  height: 130vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}

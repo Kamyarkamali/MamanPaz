@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ordeer from "../../assets/images/online.jpg";
 
 function OrderOnline() {
@@ -20,9 +21,11 @@ function OrderOnline() {
           کند آن را تهیه می‌کند.
         </p>
         <div className="flex justify-center mt-[4rem]">
-          <button className="bg-[#FF5851] text-white shadow-lg shadow-gray-500 w-[300px] h-[50px] rounded-lg">
-            میخواهم سفارش دهم
-          </button>
+          <Link to={"/cookforMamanPaz"}>
+            <button className="bg-[#FF5851] text-white shadow-lg shadow-gray-500 w-[300px] h-[50px] rounded-lg">
+              میخواهم سفارش دهم
+            </button>
+          </Link>
         </div>
       </div>
     </div>

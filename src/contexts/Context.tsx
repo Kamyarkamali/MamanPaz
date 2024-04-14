@@ -14,6 +14,10 @@ const Context: FC<Ichildren> = ({ children }) => {
 
   const [modalLogin, setModalLogin] = useState<boolean>(false);
 
+  const [filtereedProfile, setFilteredProfile] = useState<[]>([]);
+
+  const [selected, setselected] = useState<[]>([]);
+
   return (
     <MyContext.Provider
       value={{
@@ -27,6 +31,10 @@ const Context: FC<Ichildren> = ({ children }) => {
         setOpenregister,
         modalLogin,
         setModalLogin,
+        filtereedProfile,
+        setFilteredProfile,
+        selected,
+        setselected,
       }}
     >
       {children}

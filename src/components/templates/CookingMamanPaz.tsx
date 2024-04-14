@@ -15,7 +15,7 @@ function CookingMamanPaz() {
         } mt-[3rem] flex justify-center`}
       >
         <div className="absolute right-0 top-[-6.6rem] lg:top-0 flex justify-center lg:justify-start w-full z-30 mt-[11rem]">
-          <form className="w-[417px] shadow-lg shadow-gray-400 rounded-lg h-[610px] border-2">
+          <form className="w-[390px] shadow-lg shadow-gray-400 rounded-lg h-[610px] border-2">
             <h1 className="text-center mt-9 text-xl">فرم ثبت نام</h1>
             <div className="flex justify-center mt-3 gap-8">
               <input

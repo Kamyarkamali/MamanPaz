@@ -7,7 +7,7 @@ function Programmer() {
   };
 
   return (
-    <div className="mt-[7rem] max-w-[800px] m-auto">
+    <div className="mt-[7rem] flex justify-center max-w-[800px] m-auto">
       <div className="flex  flex-col lg:items-center items-center rounded-lg lg:w-[843px] w-[400px] h-[371px] bg-[#FAF4F4]">
         <h1 className="text-[30px] mb-[3rem] mt-6">برنامه هفتگی اختصاصی</h1>
         <p className="lg:w-[670px] w-[390px] text-center text-gray-500 leading-8 h-[97px] text-[15px]">

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import hero from "../../assets/images/hero.jpg";
 
 function Hero() {
@@ -17,9 +18,11 @@ function Hero() {
               شما رقم می‌زند.
             </span>
           </div>
-          <button className="bg-[#FF5851] p-3 w-[300px] text-white rounded-lg shadow-lg shadow-gray-400">
-            ناهار شرکتی میخواهم
-          </button>
+          <Link to={"/services"}>
+            <button className="bg-[#FF5851] p-3 w-[300px] text-white rounded-lg shadow-lg shadow-gray-400">
+              ناهار شرکتی میخواهم
+            </button>
+          </Link>
         </div>
       </div>
 

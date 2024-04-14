@@ -5,7 +5,6 @@ import HowOrders from "../module/HowOrders";
 import HowOrders2 from "../module/HowOrders2";
 import SliderBank from "../module/SliderBank";
 import SliderMamanPaz from "../module/SliderMamanPaz.";
-
 import WhayManamPaz from "../module/WhayManamPaz";
 
 function HomePage() {

@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface ItopMenu {
   id: number;
   paths: string;
@@ -44,4 +46,51 @@ export interface Isuporter {
 
 export interface Icity {
   city: string;
+}
+
+export interface IdataProfileMaman {
+  id: number;
+  name: string;
+  order: number;
+  foodActive: number;
+  starNumber: number;
+  prifileImg: string;
+  image1: string;
+  image2: string;
+  image3: string;
+}
+
+export interface Ifoods {
+  id: number;
+  maman: string;
+  name: string;
+  price: number;
+  star: number;
+  image: string;
+  profie: string;
+}
+
+export interface IcardProfile {
+  data: any[];
+}
+
+export interface Islider {
+  image: string;
+}
+
+export interface IfoodsCards {
+  id: number;
+  imageFood: string;
+  imageProfile: string;
+  name: string;
+  title: string;
+  price: number;
+  star: number;
+  category: string;
+}
+
+export interface IpropsChange {
+  selected: React.Dispatch<React.SetStateAction<[]>>;
+  setselected: React.Dispatch<React.SetStateAction<[]>>;
+  changeHandeler: any;
 }

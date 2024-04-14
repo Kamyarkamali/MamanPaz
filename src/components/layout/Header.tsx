@@ -35,17 +35,19 @@ function Header() {
 
   // close box register/login
   const registerHandeler = () => {
+    /* @ts-ignore */
     setOpenregister((prev) => !prev);
     setModalLogin(false);
   };
 
   const loginHandeler = () => {
+    /* @ts-ignore */
     setModalLogin((prev) => !prev);
     setOpenregister(false);
   };
 
   return (
-    <div className={`${hamburgerMenu ? "overlay" : null}`}>
+    <div className={`${hamburgerMenu ? "overlay z-[100000]" : null}`}>
       <div className="max-w-[1583px] z-50 fixed top-[-1.3rem] p-5 left-0 right-0 bg-white mt-4 m-auto">
         <div className="flex items-center justify-between 2xl:max-w-[1540px] m-auto">
           <div className="flex items-center gap-4">
@@ -84,7 +86,7 @@ function Header() {
 
             <div className="relative">
               <button
-                onClick={() => setOpenregister(true)}
+                onClick={() => setOpenregister(!openRegister)}
                 className="bg-[#EF5350] w-[119px] h-[36px] lg:block hidden p-[6px] text-sm text-white font-bold rounded-lg"
               >
                 ثبت نام / ورود
